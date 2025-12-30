@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <title>Smart Store</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f2f2f2;
+      color: #333;
+    }
+
+    header {
+      background: #0f172a;
+      color: white;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      padding: 40px;
+    }
+
+    .product {
+      background: white;
+      width: 300px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    .price {
+      font-size: 22px;
+      font-weight: bold;
+      margin: 10px 0;
+    }
+
+    .paypal-button input {
+      background: #ffc439;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #111;
+      color: #ccc;
+      padding: 20px;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    a { color: #ccc; }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Smart Store</h1>
+  <p>Trendprodukte – Sicher bezahlen mit PayPal</p>
+</header>
+
+<div class="container">
+
+  <!-- PRODUKT 1 -->
+  <div class="product">
+    <img src="https://ae01.alicdn.com/kf/S8c88c3b7a8ef4a9aa9a5f69a4fdbdd16M.jpg" alt="LED Galaxy Nachtlicht">
+    <h2>LED Galaxy Nachtlicht</h2>
+    <p>Entspannende Sternenprojektion für dein Zimmer.</p>
+    <p class="price">19,99 €</p>
+
+    <form class="paypal-button" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+      <input type="hidden" name="cmd" value="_xclick">
+      <input type="hidden" name="business" value="https://www.paypal.me/Patrik5868">
+      <input type="hidden" name="item_name" value="LED Galaxy Nachtlicht">
+      <input type="hidden" name="amount" value="19.99">
+      <input type="hidden" name="currency_code" value="EUR">
+      <input type="submit" value="Mit PayPal kaufen">
+    </form>
+  </div>
+
+  <!-- PRODUKT 2 -->
+  <div class="product">
+    <img src="https://ae01.alicdn.com/kf/S4e2c9f94c97c4b3fa8e6b6a07a4efefbF.jpg" alt="Wireless Auto Ladegerät">
+    <h2>Wireless Auto-Ladegerät</h2>
+    <p>Kabelloses Laden im Auto – hält & lädt dein Handy.</p>
+    <p class="price">29,99 €</p>
+
+    <form class="paypal-button" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+      <input type="hidden" name="cmd" value="_xclick">
+      <input type="hidden" name="business" value="https://www.paypal.me/Patrik5868">
+      <input type="hidden" name="item_name" value="Wireless Auto Ladegerät">
+      <input type="hidden" name="amount" value="29.99">
+      <input type="hidden" name="currency_code" value="EUR">
+      <input type="submit" value="Mit PayPal kaufen">
+    </form>
+  </div>
+
+  <!-- PRODUKT 3 -->
+  <div class="product">
+    <img src="https://ae01.alicdn.com/kf/Sa51f1a3b11d64a65a3ccbe0e8f8dcbf6x.jpg" alt="Mini Massage Gun">
+    <h2>Mini Massage Gun</h2>
+    <p>Leistungsstark & kompakt – perfekt für Muskelerholung.</p>
+    <p class="price">39,99 €</p>
+
+    <form class="paypal-button" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+      <input type="hidden" name="cmd" value="_xclick">
+      <input type="hidden" name="business" value="https://www.paypal.me/Patrik5868">
+      <input type="hidden" name="item_name" value="Mini Massage Gun">
+      <input type="hidden" name="amount" value="39.99">
+      <input type="hidden" name="currency_code" value="EUR">
+      <input type="submit" value="Mit PayPal kaufen">
+    </form>
+  </div>
+
+</div>
+
+<footer>
+  <p>✔ Sichere Zahlung mit PayPal</p>
+  <p>📦 Lieferzeit: 10–20 Werktage (Direktversand)</p>
+  <p>
+    <a href="#">Impressum</a> | <a href="#">Datenschutz</a>
+  </p>
+</footer>
+
+</body>
+</html>
