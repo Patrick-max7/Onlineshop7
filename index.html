@@ -30,21 +30,6 @@
       padding: 40px;
     }
 
-    /* TikTok fix unten rechts */
-    .tiktok-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      z-index: 9999;
-    }
-
-    /* TikTok Logo größer */
-    .tiktok-float img {
-      width: 65px;
-      height: 65px;
-      cursor: pointer;
-    }
-
     .product {
       background: white;
       width: 300px;
@@ -86,6 +71,18 @@
     footer a {
       color: #fff;
     }
+
+    /* TikTok Logo im Footer-Bereich */
+    .tiktok-footer {
+      margin-top: 15px;
+      display: inline-block;
+    }
+
+    .tiktok-footer img {
+      width: 65px;
+      height: 65px;
+      cursor: pointer;
+    }
   </style>
 </head>
 
@@ -100,7 +97,6 @@
 
   <!-- PRODUKT 1 -->
   <div class="product">
-
     <img id="product2Image"
          src="case_iphone11_black.jpg"
          alt="Handyhülle"
@@ -161,7 +157,6 @@
       <input type="hidden" name="currency_code" value="EUR">
       <input type="submit" value="Mit PayPal kaufen">
     </form>
-
   </div>
 
   <!-- PRODUKT 2 -->
@@ -206,15 +201,15 @@
   <p>
     <a href="#">Impressum</a> | <a href="#">Datenschutz</a>
   </p>
-</footer>
 
-<!-- TikTok Icon -->
-<a href="https://www.tiktok.com/@novvacart"
-   class="tiktok-float"
-   target="_blank"
-   rel="noopener noreferrer">
-  <img src="Tiktok.PNG" alt="TikTok">
-</a>
+  <!-- TikTok scrollt mit -->
+  <a href="https://www.tiktok.com/@novvacart"
+     class="tiktok-footer"
+     target="_blank"
+     rel="noopener noreferrer">
+    <img src="Tiktok.PNG" alt="TikTok">
+  </a>
+</footer>
 
 <script>
 const model2 = document.getElementById("model2");
