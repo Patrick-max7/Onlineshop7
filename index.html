@@ -30,6 +30,21 @@
       padding: 40px;
     }
 
+    /* TikTok fix unten rechts */
+    .tiktok-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 9999;
+    }
+
+    /* TikTok Logo größer */
+    .tiktok-float img {
+      width: 65px;
+      height: 65px;
+      cursor: pointer;
+    }
+
     .product {
       background: white;
       width: 300px;
@@ -67,22 +82,10 @@
       font-size: 14px;
     }
 
-    /* 🔴 HIER DIE ÄNDERUNGEN 🔴 */
-
     /* Impressum & Datenschutz weiß */
     footer a {
       color: #fff;
     }
-
-    /* TikTok Bild größer & weiter rechts */
-    .tiktok-footer img {
-      width: 45px;
-      height: 45px;
-      margin-left: 25px;
-      vertical-align: middle;
-      cursor: pointer;
-    }
-
   </style>
 </head>
 
@@ -95,6 +98,7 @@
 
 <div class="container">
 
+  <!-- PRODUKT 1 -->
   <div class="product">
 
     <img id="product2Image"
@@ -160,6 +164,40 @@
 
   </div>
 
+  <!-- PRODUKT 2 -->
+  <div class="product">
+    <img src="carhold1.jpg.AVIF" alt="Car Holder">
+    <h2>Wireless Auto-Ladegerät</h2>
+    <p>Kabelloses Laden im Auto – hält & lädt dein Handy.</p>
+    <p class="price">29,99 €</p>
+
+    <form class="paypal-button" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+      <input type="hidden" name="cmd" value="_xclick">
+      <input type="hidden" name="business" value="patrikempfang@gmail.com">
+      <input type="hidden" name="item_name" value="Wireless Auto Ladegerät">
+      <input type="hidden" name="amount" value="29.99">
+      <input type="hidden" name="currency_code" value="EUR">
+      <input type="submit" value="Mit PayPal kaufen">
+    </form>
+  </div>
+
+  <!-- PRODUKT 3 -->
+  <div class="product">
+    <img src="rosebar1.jpg.JPG" alt="Rosenbär">
+    <h2>Roter Rosenbär</h2>
+    <p>Perfekt für ein Kleines Geschenk. 🧸</p>
+    <p class="price">9,99 €</p>
+
+    <form class="paypal-button" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+      <input type="hidden" name="cmd" value="_xclick">
+      <input type="hidden" name="business" value="patrikempfang@gmail.com">
+      <input type="hidden" name="item_name" value="Rosenbär">
+      <input type="hidden" name="amount" value="9.99">
+      <input type="hidden" name="currency_code" value="EUR">
+      <input type="submit" value="Mit PayPal kaufen">
+    </form>
+  </div>
+
 </div>
 
 <footer>
@@ -167,14 +205,16 @@
   <p>📦 Lieferzeit: 10–20 Werktage (Direktversand)</p>
   <p>
     <a href="#">Impressum</a> | <a href="#">Datenschutz</a>
-    <a href="https://www.tiktok.com/@novvacart"
-       class="tiktok-footer"
-       target="_blank"
-       rel="noopener noreferrer">
-      <img src="Tiktok.PNG" alt="TikTok">
-    </a>
   </p>
 </footer>
+
+<!-- TikTok Icon -->
+<a href="https://www.tiktok.com/@novvacart"
+   class="tiktok-float"
+   target="_blank"
+   rel="noopener noreferrer">
+  <img src="Tiktok.PNG" alt="TikTok">
+</a>
 
 <script>
 const model2 = document.getElementById("model2");
