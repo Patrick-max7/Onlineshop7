@@ -65,22 +65,25 @@
       padding: 20px;
       text-align: center;
       font-size: 14px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
     }
 
-    a { color: #ccc; }
-
-    /* =====================
-       TIKTOK BILD NORMAL (nicht fixiert)
-    ===================== */
-    .tiktok-float {
-      display: block;
-      text-align: center; /* Bild zentrieren */
-      margin: 20px auto;  /* Abstand oben/unten */
+    footer p, footer a {
+      margin: 0;
     }
 
-    .tiktok-float img {
-      width: 50px;
-      height: 50px;
+    footer .footer-links {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+
+    footer .tiktok-footer img {
+      width: 30px;
+      height: 30px;
       cursor: pointer;
     }
 
@@ -232,18 +235,14 @@ color2.addEventListener("change", updateProduct2Image);
 <footer>
   <p>✔ Sichere Zahlung mit PayPal</p>
   <p>📦 Lieferzeit: 10–20 Werktage (Direktversand)</p>
-  <p>
+  <div class="footer-links">
     <a href="#">Impressum</a> | <a href="#">Datenschutz</a>
-  </p>
+    <!-- TikTok Bild zentriert neben den Links -->
+    <a href="https://www.tiktok.com/@novvacart" class="tiktok-footer" target="_blank" rel="noopener noreferrer">
+      <img src="Tiktok.PNG" alt="TikTok">
+    </a>
+  </div>
 </footer>
 
-<!-- TikTok Button jetzt unten auf der Seite -->
-<a href="https://www.tiktok.com/@novvacart"
-   class="tiktok-float"
-   target="_blank"
-   rel="noopener noreferrer">
-    <img src="Tiktok.PNG" alt="TikTok">
-</a> 
-
 </body>
-</html
+</html>
