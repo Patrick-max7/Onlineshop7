@@ -65,25 +65,21 @@
       padding: 20px;
       text-align: center;
       font-size: 14px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 10px;
     }
 
-    footer p, footer a {
-      margin: 0;
+    /* 🔴 HIER DIE ÄNDERUNGEN 🔴 */
+
+    /* Impressum & Datenschutz weiß */
+    footer a {
+      color: #fff;
     }
 
-    footer .footer-links {
-      display: flex;
-      gap: 10px;
-      align-items: center;
-    }
-
-    footer .tiktok-footer img {
-      width: 30px;
-      height: 30px;
+    /* TikTok Bild größer & weiter rechts */
+    .tiktok-footer img {
+      width: 45px;
+      height: 45px;
+      margin-left: 25px;
+      vertical-align: middle;
       cursor: pointer;
     }
 
@@ -99,135 +95,69 @@
 
 <div class="container">
 
-  <!-- PRODUKT 1 -->
-<div class="product">
-
-  <!-- PRODUKTBILD -->
-  <img id="product2Image"
-       src="case_iphone11_black.jpg"
-       alt="Handyhülle"
-       style="width:100%; max-width:260px;">
-
-  <h2>MagSafe Handyhülle</h2>
-  <p>Stoßfeste Handyhülle mit MagSafe – schlank & modern.</p>
-  <p class="price">8,99 €</p>
-
-  <!-- FARBE -->
-  <label><strong>Farbe:</strong></label><br>
-  <select id="color2">
-    <option value="black">Schwarz</option>
-    <option value="pink">Pink</option>
-    <option value="green">Grün</option>
-    <option value="blue">Blau</option>
-    <option value="red">Rot</option>
-  </select>
-
-  <br><br>
-
-  <!-- MODELL -->
-  <label><strong>Modell:</strong></label><br>
-  <select id="model2">
-    <option value="iphone11">iPhone 11</option>
-    <option value="iphone11pro">iPhone 11 Pro</option>
-    <option value="iphone11promax">iPhone 11 Pro Max</option>
-
-    <option value="iphone12">iPhone 12</option>
-    <option value="iphone12mini">iPhone 12 mini</option>
-    <option value="iphone12pro">iPhone 12 Pro</option>
-    <option value="iphone12promax">iPhone 12 Pro Max</option>
-
-    <option value="iphone13">iPhone 13</option>
-    <option value="iphone13mini">iPhone 13 mini</option>
-    <option value="iphone13pro">iPhone 13 Pro</option>
-    <option value="iphone13promax">iPhone 13 Pro Max</option>
-
-    <option value="iphone14">iPhone 14</option>
-    <option value="iphone14plus">iPhone 14 Plus</option>
-    <option value="iphone14pro">iPhone 14 Pro</option>
-    <option value="iphone14promax">iPhone 14 Pro Max</option>
-
-    <option value="iphone15">iPhone 15</option>
-    <option value="iphone15plus">iPhone 15 Plus</option>
-    <option value="iphone15pro">iPhone 15 Pro</option>
-    <option value="iphone15promax">iPhone 15 Pro Max</option>
-
-    <option value="iphone16">iPhone 16</option>
-    <option value="iphone16plus">iPhone 16 Plus</option>
-    <option value="iphone16pro">iPhone 16 Pro</option>
-    <option value="iphone16promax">iPhone 16 Pro Max</option>
-
-    <option value="iphone17">iPhone 17</option>
-    <option value="iphone17pro">iPhone 17 Pro</option>
-    <option value="iphone17promax">iPhone 17 Pro Max</option>
-  </select>
-
-  <br><br>
-
-  <!-- PAYPAL -->
-  <form action="https://www.paypal.com/cgi-bin/webscr"
-        method="post"
-        target="_blank">
-
-    <input type="hidden" name="cmd" value="_xclick">
-    <input type="hidden" name="business" value="patrikempfang@gmail.com">
-    <input type="hidden" name="item_name" value="MagSafe Handyhülle">
-    <input type="hidden" name="amount" value="8.99">
-    <input type="hidden" name="currency_code" value="EUR">
-
-    <input type="submit" value="Mit PayPal kaufen">
-  </form>
-
-</div>
-
-<!-- SCRIPT -->
-<script>
-const model2 = document.getElementById("model2");
-const color2 = document.getElementById("color2");
-const image2 = document.getElementById("product2Image");
-
-function updateProduct2Image() {
-  const model = model2.value;
-  const color = color2.value;
-
-  image2.src = `case_${model}_${color}.jpg`;
-}
-
-model2.addEventListener("change", updateProduct2Image);
-color2.addEventListener("change", updateProduct2Image);
-</script>
-
-  <!-- PRODUKT 2 -->
   <div class="product">
-    <img src="carhold1.jpg.AVIF" alt="Car Holder 1">
-    <h2>Wireless Auto-Ladegerät</h2>
-    <p>Kabelloses Laden im Auto – hält & lädt dein Handy.</p>
-    <p class="price">29,99 €</p>
 
-    <form class="paypal-button" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+    <img id="product2Image"
+         src="case_iphone11_black.jpg"
+         alt="Handyhülle"
+         style="width:100%; max-width:260px;">
+
+    <h2>MagSafe Handyhülle</h2>
+    <p>Stoßfeste Handyhülle mit MagSafe – schlank & modern.</p>
+    <p class="price">8,99 €</p>
+
+    <label><strong>Farbe:</strong></label><br>
+    <select id="color2">
+      <option value="black">Schwarz</option>
+      <option value="pink">Pink</option>
+      <option value="green">Grün</option>
+      <option value="blue">Blau</option>
+      <option value="red">Rot</option>
+    </select>
+
+    <br><br>
+
+    <label><strong>Modell:</strong></label><br>
+    <select id="model2">
+      <option value="iphone11">iPhone 11</option>
+      <option value="iphone11pro">iPhone 11 Pro</option>
+      <option value="iphone11promax">iPhone 11 Pro Max</option>
+      <option value="iphone12">iPhone 12</option>
+      <option value="iphone12mini">iPhone 12 mini</option>
+      <option value="iphone12pro">iPhone 12 Pro</option>
+      <option value="iphone12promax">iPhone 12 Pro Max</option>
+      <option value="iphone13">iPhone 13</option>
+      <option value="iphone13mini">iPhone 13 mini</option>
+      <option value="iphone13pro">iPhone 13 Pro</option>
+      <option value="iphone13promax">iPhone 13 Pro Max</option>
+      <option value="iphone14">iPhone 14</option>
+      <option value="iphone14plus">iPhone 14 Plus</option>
+      <option value="iphone14pro">iPhone 14 Pro</option>
+      <option value="iphone14promax">iPhone 14 Pro Max</option>
+      <option value="iphone15">iPhone 15</option>
+      <option value="iphone15plus">iPhone 15 Plus</option>
+      <option value="iphone15pro">iPhone 15 Pro</option>
+      <option value="iphone15promax">iPhone 15 Pro Max</option>
+      <option value="iphone16">iPhone 16</option>
+      <option value="iphone16plus">iPhone 16 Plus</option>
+      <option value="iphone16pro">iPhone 16 Pro</option>
+      <option value="iphone16promax">iPhone 16 Pro Max</option>
+      <option value="iphone17">iPhone 17</option>
+      <option value="iphone17pro">iPhone 17 Pro</option>
+      <option value="iphone17promax">iPhone 17 Pro Max</option>
+    </select>
+
+    <br><br>
+
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
       <input type="hidden" name="cmd" value="_xclick">
       <input type="hidden" name="business" value="patrikempfang@gmail.com">
-      <input type="hidden" name="item_name" value="Wireless Auto Ladegerät">
-      <input type="hidden" name="amount" value="29.99">
+      <input type="hidden" name="item_name" value="MagSafe Handyhülle">
+      <input type="hidden" name="amount" value="8.99">
       <input type="hidden" name="currency_code" value="EUR">
       <input type="submit" value="Mit PayPal kaufen">
     </form>
-  </div>
 
-  <!-- PRODUKT 3 -->
-  <div class="product">
-    <img src="rosebar1.jpg.JPG" alt="Rosebar 1">
-    <h2>Roter Rosenbär</h2>
-    <p>Perfekt für ein Kleines Geschenk. 🧸</p>
-    <p class="price">9,99 €</p>
-
-    <form class="paypal-button" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-      <input type="hidden" name="cmd" value="_xclick">
-      <input type="hidden" name="business" value="patrikempfang@gmail.com">
-      <input type="hidden" name="item_name" value="Rosenbär">
-      <input type="hidden" name="amount" value="9.99">
-      <input type="hidden" name="currency_code" value="EUR">
-      <input type="submit" value="Mit PayPal kaufen">
-    </form>
   </div>
 
 </div>
@@ -235,14 +165,29 @@ color2.addEventListener("change", updateProduct2Image);
 <footer>
   <p>✔ Sichere Zahlung mit PayPal</p>
   <p>📦 Lieferzeit: 10–20 Werktage (Direktversand)</p>
-  <div class="footer-links">
+  <p>
     <a href="#">Impressum</a> | <a href="#">Datenschutz</a>
-    <!-- TikTok Bild zentriert neben den Links -->
-    <a href="https://www.tiktok.com/@novvacart" class="tiktok-footer" target="_blank" rel="noopener noreferrer">
+    <a href="https://www.tiktok.com/@novvacart"
+       class="tiktok-footer"
+       target="_blank"
+       rel="noopener noreferrer">
       <img src="Tiktok.PNG" alt="TikTok">
     </a>
-  </div>
+  </p>
 </footer>
+
+<script>
+const model2 = document.getElementById("model2");
+const color2 = document.getElementById("color2");
+const image2 = document.getElementById("product2Image");
+
+function updateProduct2Image() {
+  image2.src = `case_${model2.value}_${color2.value}.jpg`;
+}
+
+model2.addEventListener("change", updateProduct2Image);
+color2.addEventListener("change", updateProduct2Image);
+</script>
 
 </body>
 </html>
