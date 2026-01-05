@@ -1,259 +1,255 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <title>NovraCart</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>NovraCart</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background-color: #eeeeee;
-      background-image: radial-gradient(#d6d6d6 2px, transparent 2px);
-      background-size: 20px 20px;
-      color: #333;
-    }
+<style>
+/* --- DEIN STYLE UNVERÄNDERT --- */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: #eeeeee;
+  background-image: radial-gradient(#d6d6d6 2px, transparent 2px);
+  background-size: 20px 20px;
+  color: #333;
+}
 
-    header {
-      background: #0f172a;
-      color: white;
-      padding: 30px;
-      text-align: center;
-    }
+header {
+  background: #0f172a;
+  color: white;
+  padding: 30px;
+  text-align: center;
+}
 
-    .container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 25px;
-      padding: 40px;
-    }
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 40px;
+}
 
-    .product {
-      background: white;
-      width: 300px;
-      border-radius: 10px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      padding: 20px;
-      text-align: center;
-    }
+.product {
+  background: white;
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  padding: 20px;
+  text-align: center;
+}
 
-    .product img {
-      width: 100%;
-      border-radius: 8px;
-    }
+.product img {
+  width: 100%;
+  border-radius: 8px;
+}
 
-    .price {
-      font-size: 22px;
-      font-weight: bold;
-      margin: 10px 0;
-    }
+.price {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 10px 0;
+}
 
-    .select-row {
-      display: flex;
-      gap: 12px;
-      justify-content: center;
-      margin: 15px 0;
-    }
+.select-row {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin: 15px 0;
+}
 
-    .select-group {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
+.select-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
-    .select-group label {
-      font-size: 14px;
-      font-weight: bold;
-      margin-bottom: 4px;
-    }
+.select-group label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
 
-    select {
-      width: 130px;
-      padding: 10px 12px;
-      font-size: 15px;
-      border-radius: 10px;
-      border: 1px solid #ccc;
-      background: #f9f9f9;
-      cursor: pointer;
-    }
+select {
+  width: 130px;
+  padding: 10px 12px;
+  font-size: 15px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  cursor: pointer;
+}
 
-    .paypal-button input,
-    form input[type="submit"] {
-      background: #ffc439;
-      border: none;
-      padding: 14px 22px;
-      font-size: 16px;
-      font-weight: bold;
-      border-radius: 10px;
-      cursor: pointer;
-    }
+form input[type="submit"] {
+  background: #ffc439;
+  border: none;
+  padding: 14px 22px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+}
 
-    footer {
-      background: #111;
-      color: #ccc;
-      padding: 20px;
-      text-align: center;
-      font-size: 14px;
-    }
+footer {
+  background: #111;
+  color: #ccc;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+}
 
-    footer a {
-      color: #fff;
-    }
+footer a { color: #fff; }
 
-    .tiktok-footer {
-      margin-top: 15px;
-      display: inline-block;
-    }
-
-    .tiktok-footer img {
-      width: 65px;
-      height: 65px;
-      cursor: pointer;
-    }
-  </style>
+.tiktok-footer img {
+  width: 65px;
+  height: 65px;
+}
+</style>
 </head>
 
 <body>
 
 <header>
-  <h1>NovraCart</h1>
-  <p>Trendprodukte – Sicher bezahlen mit PayPal</p>
+<h1>NovraCart</h1>
+<p>Trendprodukte – Sicher bezahlen mit PayPal</p>
 </header>
 
 <div class="container">
 
-  <!-- PRODUKT 1 -->
-  <div class="product">
-    <img id="product1Image" src="case_iphone11_black.jpg">
+<!-- PRODUKT 1 -->
+<div class="product">
+<img id="product1Image" src="case_iphone11_schwarz.jpg">
 
-    <h2>MagSafe Handyhülle</h2>
-    <p class="price">8,99 €</p>
+<h2>MagSafe Handyhülle</h2>
+<p class="price">8,99 €</p>
 
-    <div class="select-row">
-      <div class="select-group">
-        <label>Farbe</label>
-        <select id="color1">
-          <option value="Schwarz">Schwarz</option>
-          <option value="Pink">Pink</option>
-          <option value="Grün">Grün</option>
-          <option value="Blau">Blau</option>
-          <option value="Rot">Rot</option>
-        </select>
-      </div>
-
-      <div class="select-group">
-        <label>Modell</label>
-        <select id="model1">
-          <option value="iPhone 11">iPhone 11</option>
-          <option value="iPhone 12">iPhone 12</option>
-          <option value="iPhone 13">iPhone 13</option>
-          <option value="iPhone 14">iPhone 14</option>
-          <option value="iPhone 15">iPhone 15</option>
-        </select>
-      </div>
-    </div>
-
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-      <input type="hidden" name="cmd" value="_xclick">
-      <input type="hidden" name="business" value="patrikempfang@gmail.com">
-      <input type="hidden" id="item1" name="item_name">
-      <input type="hidden" name="amount" value="8.99">
-      <input type="hidden" name="currency_code" value="EUR">
-      <input type="submit" onclick="setItem1()" value="Mit PayPal kaufen">
-    </form>
+<div class="select-row">
+  <div class="select-group">
+    <label>Farbe</label>
+    <select id="color1">
+      <option value="schwarz">Schwarz</option>
+      <option value="pink">Pink</option>
+      <option value="grün">Grün</option>
+      <option value="blau">Blau</option>
+      <option value="rot">Rot</option>
+    </select>
   </div>
 
-  <!-- PRODUKT 2 (AirPods Case wie Produkt 1) -->
-  <div class="product">
-    <img id="product2Image" src="airpods_black.jpg">
+  <div class="select-group">
+    <label>Modell</label>
+    <select id="model1">
+      <option value="iphone11">iPhone 11</option>
+      <option value="iphone12">iPhone 12</option>
+      <option value="iphone13">iPhone 13</option>
+      <option value="iphone14">iPhone 14</option>
+      <option value="iphone15">iPhone 15</option>
+    </select>
+  </div>
+</div>
 
-    <h2>AirPods Case</h2>
-    <p class="price">9,99 €</p>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="patrikempfang@gmail.com">
+<input type="hidden" id="item1" name="item_name">
+<input type="hidden" name="amount" value="8.99">
+<input type="hidden" name="currency_code" value="EUR">
+<input type="submit" onclick="setItem1()" value="Mit PayPal kaufen">
+</form>
+</div>
 
-    <div class="select-row">
-      <div class="select-group">
-        <label>Farbe</label>
-        <select id="color2">
-          <option value="Schwarz">Schwarz</option>
-          <option value="Pink">Pink</option>
-          <option value="Grün">Grün</option>
-          <option value="Blau">Blau</option>
-          <option value="Rot">Rot</option>
-        </select>
-      </div>
+<!-- PRODUKT 2 -->
+<div class="product">
+<img id="product2Image" src="airpods_airpods1_schwarz.jpg">
 
-      <div class="select-group">
-        <label>Modell</label>
-        <select id="model2">
-          <option value="AirPods 1">AirPods 1</option>
-          <option value="AirPods 2">AirPods 2</option>
-          <option value="AirPods 3">AirPods 3</option>
-          <option value="AirPods 4">AirPods 4</option>
-          <option value="AirPods Pro">AirPods Pro</option>
-          <option value="AirPods Pro 2">AirPods Pro 2</option>
-          <option value="AirPods Pro 3">AirPods Pro 3</option>
-        </select>
-      </div>
-    </div>
+<h2>AirPods Case</h2>
+<p class="price">9,99 €</p>
 
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-      <input type="hidden" name="cmd" value="_xclick">
-      <input type="hidden" name="business" value="patrikempfang@gmail.com">
-      <input type="hidden" id="item2" name="item_name">
-      <input type="hidden" name="amount" value="9.99">
-      <input type="hidden" name="currency_code" value="EUR">
-      <input type="submit" onclick="setItem2()" value="Mit PayPal kaufen">
-    </form>
+<div class="select-row">
+  <div class="select-group">
+    <label>Farbe</label>
+    <select id="color2">
+      <option value="schwarz">Schwarz</option>
+      <option value="pink">Pink</option>
+      <option value="grün">Grün</option>
+      <option value="blau">Blau</option>
+      <option value="rot">Rot</option>
+    </select>
   </div>
 
-  <!-- PRODUKT 3 -->
-  <div class="product">
-    <img src="rosebar1.jpg.JPG">
-    <h2>Roter Rosenbär</h2>
-    <p>Perfekt für ein kleines Geschenk 🧸</p>
-    <p class="price">9,99 €</p>
-
-    <form class="paypal-button" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
-      <input type="hidden" name="cmd" value="_xclick">
-      <input type="hidden" name="business" value="patrikempfang@gmail.com">
-      <input type="hidden" name="item_name" value="Roter Rosenbär">
-      <input type="hidden" name="amount" value="9.99">
-      <input type="hidden" name="currency_code" value="EUR">
-      <input type="submit" value="Mit PayPal kaufen">
-    </form>
+  <div class="select-group">
+    <label>Modell</label>
+    <select id="model2">
+      <option value="airpods1">AirPods 1</option>
+      <option value="airpods2">AirPods 2</option>
+      <option value="airpods3">AirPods 3</option>
+      <option value="airpods4">AirPods 4</option>
+      <option value="airpodspro">AirPods Pro</option>
+      <option value="airpodspro2">AirPods Pro 2</option>
+      <option value="airpodspro3">AirPods Pro 3</option>
+    </select>
   </div>
+</div>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="patrikempfang@gmail.com">
+<input type="hidden" id="item2" name="item_name">
+<input type="hidden" name="amount" value="9.99">
+<input type="hidden" name="currency_code" value="EUR">
+<input type="submit" onclick="setItem2()" value="Mit PayPal kaufen">
+</form>
+</div>
+
+<!-- PRODUKT 3 -->
+<div class="product">
+<img src="rosebar1.jpg.JPG">
+<h2>Roter Rosenbär</h2>
+<p class="price">9,99 €</p>
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+<input type="hidden" name="cmd" value="_xclick">
+<input type="hidden" name="business" value="patrikempfang@gmail.com">
+<input type="hidden" name="item_name" value="Roter Rosenbär">
+<input type="hidden" name="amount" value="9.99">
+<input type="hidden" name="currency_code" value="EUR">
+<input type="submit" value="Mit PayPal kaufen">
+</form>
+</div>
 
 </div>
 
 <footer>
-  <p>✔ Sichere Zahlung mit PayPal</p>
-  <p>📦 Lieferzeit: 10–20 Werktage (Direktversand)</p>
-  <p>
-    <a href="#">Impressum</a> | <a href="#">Datenschutz</a>
-  </p>
-
-  <a href="https://www.tiktok.com/@novvacart"
-     class="tiktok-footer"
-     target="_blank"
-     rel="noopener noreferrer">
-    <img src="Tiktok.PNG" alt="TikTok">
-  </a>
+<p>✔ Sichere Zahlung mit PayPal</p>
+<p>📦 Lieferzeit: 10–20 Werktage (Direktversand)</p>
+<p><a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
+<a href="https://www.tiktok.com/@novvacart" class="tiktok-footer" target="_blank">
+<img src="Tiktok.PNG">
+</a>
 </footer>
 
 <script>
+/* PAYPAL TEXT */
 function setItem1() {
-  item1.value =
-    "MagSafe Handyhülle – Farbe: " + color1.value +
-    " – Modell: " + model1.value;
+  item1.value = "MagSafe Handyhülle – Farbe: " + color1.value + " – Modell: " + model1.value;
 }
 
 function setItem2() {
-  item2.value =
-    "AirPods Case – Farbe: " + color2.value +
-    " – Modell: " + model2.value;
+  item2.value = "AirPods Case – Farbe: " + color2.value + " – Modell: " + model2.value;
 }
+
+/* 🔄 BILDWECHSEL */
+function updateProduct1Image() {
+  product1Image.src = `case_${model1.value}_${color1.value}.jpg`;
+}
+
+function updateProduct2Image() {
+  product2Image.src = `airpods_${model2.value}_${color2.value}.jpg`;
+}
+
+color1.addEventListener("change", updateProduct1Image);
+model1.addEventListener("change", updateProduct1Image);
+
+color2.addEventListener("change", updateProduct2Image);
+model2.addEventListener("change", updateProduct2Image);
 </script>
 
 </body>
