@@ -50,7 +50,6 @@
       margin: 10px 0;
     }
 
-    /* ===== NEU: Auswahl modern ===== */
     .select-row {
       display: flex;
       gap: 12px;
@@ -78,20 +77,8 @@
       border: 1px solid #ccc;
       background: #f9f9f9;
       cursor: pointer;
-      transition: all 0.2s ease;
     }
 
-    select:hover {
-      border-color: #2563eb;
-    }
-
-    select:focus {
-      outline: none;
-      border-color: #2563eb;
-      box-shadow: 0 0 0 3px rgba(37,99,235,0.2);
-    }
-
-    /* ===== PayPal Button GELB ===== */
     .paypal-button input,
     form input[type="submit"] {
       background: #ffc439;
@@ -101,14 +88,6 @@
       font-weight: bold;
       border-radius: 10px;
       cursor: pointer;
-      transition: all 0.2s ease;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    }
-
-    .paypal-button input:hover,
-    form input[type="submit"]:hover {
-      background: #ffb300;
-      transform: translateY(-2px);
     }
 
     footer {
@@ -147,49 +126,31 @@
 
   <!-- PRODUKT 1 -->
   <div class="product">
-    <img id="product2Image"
-         src="case_iphone11_black.jpg"
-         alt="Handyhülle"
-         style="width:100%; max-width:260px;">
+    <img id="product1Image" src="case_iphone11_black.jpg">
 
     <h2>MagSafe Handyhülle</h2>
-    <p>Stoßfeste Handyhülle mit MagSafe – schlank & modern.</p>
     <p class="price">8,99 €</p>
 
     <div class="select-row">
       <div class="select-group">
         <label>Farbe</label>
-        <select id="color2">
-          <option value="black">Schwarz</option>
-          <option value="pink">Pink</option>
-          <option value="green">Grün</option>
-          <option value="blue">Blau</option>
-          <option value="red">Rot</option>
+        <select id="color1">
+          <option value="Schwarz">Schwarz</option>
+          <option value="Pink">Pink</option>
+          <option value="Grün">Grün</option>
+          <option value="Blau">Blau</option>
+          <option value="Rot">Rot</option>
         </select>
       </div>
 
       <div class="select-group">
         <label>Modell</label>
-        <select id="model2">
-          <option value="iphone11">iPhone 11</option>
-          <option value="iphone11pro">iPhone 11 Pro</option>
-          <option value="iphone11promax">iPhone 11 Pro Max</option>
-          <option value="iphone12">iPhone 12</option>
-          <option value="iphone12mini">iPhone 12 mini</option>
-          <option value="iphone12pro">iPhone 12 Pro</option>
-          <option value="iphone12promax">iPhone 12 Pro Max</option>
-          <option value="iphone13">iPhone 13</option>
-          <option value="iphone13mini">iPhone 13 mini</option>
-          <option value="iphone13pro">iPhone 13 Pro</option>
-          <option value="iphone13promax">iPhone 13 Pro Max</option>
-          <option value="iphone14">iPhone 14</option>
-          <option value="iphone14plus">iPhone 14 Plus</option>
-          <option value="iphone14pro">iPhone 14 Pro</option>
-          <option value="iphone14promax">iPhone 14 Pro Max</option>
-          <option value="iphone15">iPhone 15</option>
-          <option value="iphone15plus">iPhone 15 Plus</option>
-          <option value="iphone15pro">iPhone 15 Pro</option>
-          <option value="iphone15promax">iPhone 15 Pro Max</option>
+        <select id="model1">
+          <option value="iPhone 11">iPhone 11</option>
+          <option value="iPhone 12">iPhone 12</option>
+          <option value="iPhone 13">iPhone 13</option>
+          <option value="iPhone 14">iPhone 14</option>
+          <option value="iPhone 15">iPhone 15</option>
         </select>
       </div>
     </div>
@@ -197,41 +158,67 @@
     <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
       <input type="hidden" name="cmd" value="_xclick">
       <input type="hidden" name="business" value="patrikempfang@gmail.com">
-      <input type="hidden" name="item_name" value="MagSafe Handyhülle">
+      <input type="hidden" id="item1" name="item_name">
       <input type="hidden" name="amount" value="8.99">
       <input type="hidden" name="currency_code" value="EUR">
-      <input type="submit" value="Mit PayPal kaufen">
+      <input type="submit" onclick="setItem1()" value="Mit PayPal kaufen">
     </form>
   </div>
 
-  <!-- PRODUKT 2 -->
+  <!-- PRODUKT 2 (AirPods Case wie Produkt 1) -->
   <div class="product">
-    <img src="carhold1.jpg.AVIF" alt="Car Holder">
-    <h2>Wireless Auto-Ladegerät</h2>
-    <p>Kabelloses Laden im Auto – hält & lädt dein Handy.</p>
-    <p class="price">29,99 €</p>
+    <img id="product2Image" src="airpods_black.jpg">
 
-    <form class="paypal-button" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+    <h2>AirPods Case</h2>
+    <p class="price">9,99 €</p>
+
+    <div class="select-row">
+      <div class="select-group">
+        <label>Farbe</label>
+        <select id="color2">
+          <option value="Schwarz">Schwarz</option>
+          <option value="Pink">Pink</option>
+          <option value="Grün">Grün</option>
+          <option value="Blau">Blau</option>
+          <option value="Rot">Rot</option>
+        </select>
+      </div>
+
+      <div class="select-group">
+        <label>Modell</label>
+        <select id="model2">
+          <option value="AirPods 1">AirPods 1</option>
+          <option value="AirPods 2">AirPods 2</option>
+          <option value="AirPods 3">AirPods 3</option>
+          <option value="AirPods 4">AirPods 4</option>
+          <option value="AirPods Pro">AirPods Pro</option>
+          <option value="AirPods Pro 2">AirPods Pro 2</option>
+          <option value="AirPods Pro 3">AirPods Pro 3</option>
+        </select>
+      </div>
+    </div>
+
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
       <input type="hidden" name="cmd" value="_xclick">
       <input type="hidden" name="business" value="patrikempfang@gmail.com">
-      <input type="hidden" name="item_name" value="Wireless Auto Ladegerät">
-      <input type="hidden" name="amount" value="29.99">
+      <input type="hidden" id="item2" name="item_name">
+      <input type="hidden" name="amount" value="9.99">
       <input type="hidden" name="currency_code" value="EUR">
-      <input type="submit" value="Mit PayPal kaufen">
+      <input type="submit" onclick="setItem2()" value="Mit PayPal kaufen">
     </form>
   </div>
 
   <!-- PRODUKT 3 -->
   <div class="product">
-    <img src="rosebar1.jpg.JPG" alt="Rosenbär">
+    <img src="rosebar1.jpg.JPG">
     <h2>Roter Rosenbär</h2>
-    <p>Perfekt für ein Kleines Geschenk. 🧸</p>
+    <p>Perfekt für ein kleines Geschenk 🧸</p>
     <p class="price">9,99 €</p>
 
     <form class="paypal-button" action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
       <input type="hidden" name="cmd" value="_xclick">
       <input type="hidden" name="business" value="patrikempfang@gmail.com">
-      <input type="hidden" name="item_name" value="Rosenbär">
+      <input type="hidden" name="item_name" value="Roter Rosenbär">
       <input type="hidden" name="amount" value="9.99">
       <input type="hidden" name="currency_code" value="EUR">
       <input type="submit" value="Mit PayPal kaufen">
@@ -247,22 +234,26 @@
     <a href="#">Impressum</a> | <a href="#">Datenschutz</a>
   </p>
 
-  <a href="https://www.tiktok.com/@novvacart" class="tiktok-footer" target="_blank">
+  <a href="https://www.tiktok.com/@novvacart"
+     class="tiktok-footer"
+     target="_blank"
+     rel="noopener noreferrer">
     <img src="Tiktok.PNG" alt="TikTok">
   </a>
 </footer>
 
 <script>
-const model2 = document.getElementById("model2");
-const color2 = document.getElementById("color2");
-const image2 = document.getElementById("product2Image");
-
-function updateProduct2Image() {
-  image2.src = `case_${model2.value}_${color2.value}.jpg`;
+function setItem1() {
+  item1.value =
+    "MagSafe Handyhülle – Farbe: " + color1.value +
+    " – Modell: " + model1.value;
 }
 
-model2.addEventListener("change", updateProduct2Image);
-color2.addEventListener("change", updateProduct2Image);
+function setItem2() {
+  item2.value =
+    "AirPods Case – Farbe: " + color2.value +
+    " – Modell: " + model2.value;
+}
 </script>
 
 </body>
